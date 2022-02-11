@@ -1,0 +1,12 @@
+{% extends 'note_base.html' %}
+{% block title %}Signup{% endblock title %}
+{% load static %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</form>
+{% endblock content %}

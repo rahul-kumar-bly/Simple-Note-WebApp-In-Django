@@ -1,0 +1,19 @@
+{% extends 'note_base.html' %}
+{% block title %}Create A Note{% endblock title %}Create A Note
+{% block content %}
+<img class="form_banner" src="https://source.unsplash.com/1200x400/?write" width="100%" alt="">
+    <div class="form-group">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Save">
+
+    </form>
+    <hr>
+        {% if note %}
+        <a href="{% url 'note_detail' note.id%}">Cancel</a>
+        {% else %}
+            <a href="{% url 'note_list'%}">Cancel</a>
+        {% endif %}    
+</div>
+{% endblock content %}

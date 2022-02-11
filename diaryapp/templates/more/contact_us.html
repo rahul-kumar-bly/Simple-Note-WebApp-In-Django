@@ -1,0 +1,12 @@
+{% extends 'note_base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
+{% block content %}
+
+<img class="form_banner" src="{% static '/images/contact.jfif' %}" width="100%" alt="">
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock content %}

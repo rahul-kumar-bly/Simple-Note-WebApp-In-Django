@@ -1,0 +1,17 @@
+{% extends 'note_base.html' %}
+    {% block title %}Delete {{note.title}}?{% endblock title %} 
+    {% block content %}  
+
+      
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            Are you sure want to delete {{note.title}}?
+        </p>
+
+        <input class="btn-primary" type="submit" value="Confirm">
+    </form>
+    <a href="{% url 'note_detail' note.id %}"><button>Cancel</button></a>
+
+
+      {% endblock content %}

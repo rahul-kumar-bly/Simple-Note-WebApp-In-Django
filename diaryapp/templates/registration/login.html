@@ -1,0 +1,15 @@
+{% extends 'note_base.html' %}
+{% block title %}Login{% endblock title %}
+{% load static %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="Username">
+    <label for="username">Password</label>
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+    <p>Didn't have an account? <a href="{% url 'signup' %}">Register</a></p>
+</form>
+{% endblock content %}

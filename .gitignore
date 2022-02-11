@@ -1,0 +1,3 @@
+uploads/images/*
+**/__pycache__
+**/migrations

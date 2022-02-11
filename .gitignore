@@ -1,3 +1,4 @@
-uploads/images/*
+**uploads/image/
 **/__pycache__
 **/migrations
+**/__pycache__

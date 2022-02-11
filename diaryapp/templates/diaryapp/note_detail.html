@@ -2,25 +2,26 @@
 {% block title %}{{note.title}}{% endblock title %}{{note.title}}
 {% block content %}
 
+
 <div class="d-block m-2 p-2">
         <h1 style="font-family: 'Nunito', sans-serif;" class="d-inline p-2 bg-primary text-white">{{note.title}}</h1>
 </div>
 <div class="d-inline m-2 p-2 ">
         <a class="p-1 bg-dark text-decoration-none text-white">&#8903; {{note.date_created|date:"d/m/y - H:i - l"}}</a>
-        <a class="p-1 px-2 bg-success text-white text-decoration-none" href="{% url 'note_update' note.id %}">&#9998;
-                Update</a>
-        <a class="p-1 px-2 bg-danger text-white text-decoration-none" href="{% url 'note_delete' note.id %}">&#x2716;
-                Delete</a>
+        <a class="p-1 px-2 bg-success text-white text-decoration-none" href="{% url 'note_update' note.id %}">&#9998; Update</a>
+        <a class="p-1 px-2 bg-danger text-white text-decoration-none" href="{% url 'note_delete' note.id %}" style="cursor:pointer" >&#x2716; Delete</a>
 </div>
 
+
 <article>
+
         <div class="m-2 p-2 d-print-grid"> 
                 {% if note.image %}
                 <img src="files/{{note.image}}" style="width:50%" />
                 {% else %}
                 <img src="https://source.unsplash.com/1920x1080/?nature" style="width:50%" />
                 {% endif %}
-                </div>
+        </div>
                 <div class='my-1 p-2'>
                         <p class="lead">{{note.message}}</p>
                 </div>

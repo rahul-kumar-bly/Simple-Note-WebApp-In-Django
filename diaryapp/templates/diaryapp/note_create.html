@@ -1,19 +1,31 @@
 {% extends 'note_base.html' %}
+{% load static %}
 {% block title %}Create A Note{% endblock title %}Create A Note
 {% block content %}
+<style>
+    label[for="image-clear_id"]{
+        visibility: hidden;
+
+    }
+    label[for="image-clear_id"]:before{
+        visibility:visible;
+        content:"Check to remove image";
+    }
+</style>
 <img class="form_banner" src="https://source.unsplash.com/1200x400/?write" width="100%" alt="">
     <div class="form-group">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Save">
-
+        <input class="btn btn-success" type="submit" value="Save">
+        {% if note %}
+        <a href="{% url 'note_detail' note.id %}"><button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button></a>
+        {% else %}
+        <a href="{% url 'note_list' %}"><button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button></a>
+        {% endif %}    
     </form>
     <hr>
-        {% if note %}
-        <a href="{% url 'note_detail' note.id%}">Cancel</a>
-        {% else %}
-            <a href="{% url 'note_list'%}">Cancel</a>
-        {% endif %}    
+
+
 </div>
 {% endblock content %}

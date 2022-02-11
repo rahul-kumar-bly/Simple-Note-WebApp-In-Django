@@ -2,11 +2,13 @@
 {% load static %}
 {% block title %}Contact Us{% endblock title %}
 {% block content %}
-
-<img class="form_banner" src="{% static '/images/contact.jfif' %}" width="100%" alt="">
+<img class="img-fluid x-0 w-100" src="{% static '/images/contact.jfif' %}"  alt="">
+<div class="d-block my-5">
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Submit">
+    <input type="submit" class="btn btn-success" value="Submit">
+    <a href="{% url 'note_list' %}"><button class="btn btn-warning">Cancel</button></a>
 </form>
+</div>
 {% endblock content %}

@@ -3,13 +3,17 @@
 {% load static %}
 
 {% block content %}
+<div class="d-block my-5" style="max-width:800px; margin-left:auto;margin-right:auto;text-align:center;">
 <form method="POST">
     {% csrf_token %}
     <label for="username">Username</label>
     <input type="text" name="username" placeholder="Username">
     <label for="username">Password</label>
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Login">
+    <input type="password" name="password" placeholder="Password" style="width:100%">
+
+    <input type="submit" class="btn btn-primary w-100 my-2" value="Login">
+    <hr>
     <p>Didn't have an account? <a href="{% url 'signup' %}">Register</a></p>
 </form>
+</div>
 {% endblock content %}

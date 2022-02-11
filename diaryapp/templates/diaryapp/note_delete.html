@@ -1,17 +1,13 @@
-{% extends 'note_base.html' %}
+ {% extends 'note_base.html' %}
     {% block title %}Delete {{note.title}}?{% endblock title %} 
-    {% block content %}  
-
-      
+    {% block content %}
+ <div class="d-block my-5" style="max-width:800px; margin-left:auto;margin-right:auto;text-align:center;">
     <form method="POST">
         {% csrf_token %}
-        <p>
-            Are you sure want to delete {{note.title}}?
-        </p>
-
-        <input class="btn-primary" type="submit" value="Confirm">
+        <img src="https://source.unsplash.com/400x100/?decision" style='left:-15px' />
+        <p class='bg-danger text-light p-2' style='width:400px'>&#9888; Are you sure to delete {{note.title}}?</p>
+        <input class="btn btn-danger" type="submit" value="Confirm">
+        <a href="{% url 'note_detail' note.id %}"><button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button></a>
     </form>
-    <a href="{% url 'note_detail' note.id %}"><button>Cancel</button></a>
-
-
+</div>
       {% endblock content %}

@@ -1,9 +1,5 @@
 /* form  */
 
-.form_banner{
-    border-bottom: 2px solid bisque;
-}
-
 form{
     display: block;
     padding:5px;
@@ -23,6 +19,7 @@ button,textarea,input{
 input[type=text],
 input[type=email],
 input[type=number],
+input[type=password],
 textarea{
     width: 100%;
 }
@@ -66,3 +63,11 @@ label[for="id_image"]:before{
 
 /* note details */
 
+label[for="image-clear_id"]{
+    visibility: hidden;
+}
+
+label[for="image-clear_id"]:before{
+    visibility:visible;
+    content:"Check to remove image";
+}

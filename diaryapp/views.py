@@ -1,4 +1,3 @@
-from django.forms import TextInput
 from django.shortcuts import redirect, render, HttpResponseRedirect
 from django.urls import reverse_lazy
 from . models import Note, ContactForm
@@ -94,13 +93,6 @@ class NoteCreateView(LoginRequiredMixin,CreateView):
         form.instance.user = self.request.user
         return super(NoteCreateView, self).form_valid(form)
 
-# this is note delete view
-class NoteDeleteView(SuccessMessageMixin,DeleteView):
-    template_name = "diaryapp/note_delete.html"
-    model = Note
-    success_url = reverse_lazy("note_list")
-    success_message = "Your entry was deleted"
-
 # this is note update view
 class NoteUpdateView(UpdateView):
     template_name = "diaryapp/note_create.html"
@@ -111,6 +103,15 @@ class NoteUpdateView(UpdateView):
     def get_success_url(self):
         int_id = self.kwargs['pk']
         return reverse_lazy('note_detail', kwargs={'pk':int_id})
+
+# this is note delete view
+class NoteDeleteView(SuccessMessageMixin,DeleteView):
+    template_name = "diaryapp/note_delete.html"
+    model = Note
+    success_url = reverse_lazy("note_list")
+
+
+
 
 
 ########################### Note views end

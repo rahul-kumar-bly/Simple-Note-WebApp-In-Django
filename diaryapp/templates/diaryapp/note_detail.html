@@ -11,10 +11,7 @@
         <a class="p-1 px-2 bg-success text-white text-decoration-none" href="{% url 'note_update' note.id %}">&#9998; Update</a>
         <a class="p-1 px-2 bg-danger text-white text-decoration-none" href="{% url 'note_delete' note.id %}" style="cursor:pointer" >&#x2716; Delete</a>
 </div>
-
-
 <article>
-
         <div class="m-2 p-2 d-print-grid"> 
                 {% if note.image %}
                 <img src="files/{{note.image}}" style="width:50%" />

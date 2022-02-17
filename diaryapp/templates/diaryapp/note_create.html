@@ -1,17 +1,14 @@
 {% extends 'note_base.html' %}
 {% load static %}
-{% block title %}Create A Note{% endblock title %}Create A Note
+{% block title %}
+    {% if note %}
+    Edit - {{note.title}}
+    {% else %}
+    Create A Note
+    {% endif %}
+{% endblock title %}
 {% block content %}
-<style>
-    label[for="image-clear_id"]{
-        visibility: hidden;
 
-    }
-    label[for="image-clear_id"]:before{
-        visibility:visible;
-        content:"Check to remove image";
-    }
-</style>
 <img class="form_banner" src="https://source.unsplash.com/1200x400/?write" width="100%" alt="">
     <div class="form-group">
     <form method="POST" enctype="multipart/form-data">
@@ -25,7 +22,6 @@
         {% endif %}    
     </form>
     <hr>
-
-
 </div>
+
 {% endblock content %}

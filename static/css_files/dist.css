@@ -1,0 +1,55 @@
+/* note_list.html */
+
+#article-list a:visited{
+  color:white;
+}
+
+#article-list .a_list_class{
+  text-decoration-line: none;
+}
+
+h1:hover{
+  background-color: rgb(92, 110, 167);
+}
+h1{
+  background-color: #0d6efd;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 0.75rem/* 12px */;
+  padding-bottom: 0.75rem/* 12px */;
+  padding-left: 0.5rem/* 8px */;
+  padding-right: 0.5rem/* 8px */;
+  font-size: 1.5rem/* 24px */;
+  line-height: 2rem/* 32px */;
+  display: block !important;
+  color: #fff;
+}
+
+li{
+  list-style-type: none;
+}
+
+.newh1{
+  display:block !important;
+  background-color: #1651a3;
+  padding-top: 0.75rem/* 12px */;
+  padding-bottom: 0.75rem/* 12px */;
+  padding-left: 0.5rem/* 8px */;
+  padding-right: 0.5rem/* 8px */;
+  font-size: 1.5rem/* 24px */;
+  line-height: 2rem/* 32px */;
+  font-family: 'Nunito', sans-serif;
+}
+.newh1:hover{
+  background-color: rgb(92, 110, 167);
+}
+
+/* note_create.html */
+
+label[for="image-clear_id"]{
+  visibility: hidden;
+
+}
+label[for="image-clear_id"]:before{
+  visibility:visible;
+  content:"Check to remove image";
+}

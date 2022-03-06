@@ -17,3 +17,17 @@ python manage.py migrate --run-syncdb
 
 Run the server using
 `python manage.py runserver`
+
+# App Demo
+
+### Notes Page
+![home-page](https://i.imgur.com/GngRq08.png)
+
+### Single Note View
+![single note view](https://i.imgur.com/kZfdDNa.png)
+
+### Note Update View
+![note update](https://i.imgur.com/oixMAA3.png)
+
+
+Full album https://imgur.com/a/OlRXJjr

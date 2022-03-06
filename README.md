@@ -4,10 +4,12 @@ A simple django based note web app which support user-access and crud applicatio
 # How to get started with this app?
 
 Activate virtual environment in your system. 
-For windows user type 
-`  .venv/bin/activate`
-Linux user type 
-`  source .venv/bin/activate`
+
+For windows, type 
+`.venv/bin/activate`
+
+For Linux, type 
+`source .venv/bin/activate`
   
 Create database using
 ```

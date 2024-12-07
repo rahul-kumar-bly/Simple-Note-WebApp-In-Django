@@ -1,12 +1,4 @@
 # Simple-Note-WebApp-In-Django
-### Demo - http://djangodiarynoteapp.herokuapp.com/
-######################################################
-
-username - magma
-password - Abcd@1234
-
-######################################################
-
 A simple django based note web app which support user-access and crud applications.
 
 # How to get started with this app?
